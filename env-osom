@@ -344,7 +344,7 @@ SOLR_SERVER=1.0
 ###
 HOST_PATH_HTTPD_DATADIR=./data/www/svn.osom
 HOST_PATH_HTTPD_ALICE_LOGS=./data/logs/alice
-HOST_PATH_HTTPD_BOB_LOGS=./data/logs/alice
+HOST_PATH_HTTPD_BOB_LOGS=./data/logs/bob
 
 ###
 ### Local filesystem path to mysql/mariadb datadir.
