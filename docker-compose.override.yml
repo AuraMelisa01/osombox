@@ -1,0 +1,30 @@
+# IMPORTANT: The version must match the version of docker-compose.yml
+version: '2.1'
+
+# The following override shows an example for the cockroachdb
+services:
+  # ------------------------------------------------------------
+  # Solr
+  # ------------------------------------------------------------
+  solr:
+    image: eortegamtz/solr
+
+    ports:
+      # [local-machine:]local-port:solr-port
+      - "${LOCAL_LISTEN_ADDR}${HOST_PORT_SOLR}:8080"
+
+    networks:
+      app_net:
+        ipv4_address: 172.16.238.17
+
+    volumes:
+      # ---- Format: ----
+      # HOST-DIRECTORY : DOCKER-DIRECTORY
+
+      # Mount Solr Data directory
+      - ${HOST_PATH_SOLR_DATADIR}/${SOLR_SERVER}:/opt/solr/app/data
+
+    depends_on:
+      - bind
+      - php
+      - httpd

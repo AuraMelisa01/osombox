@@ -52,6 +52,13 @@ vhost: |
       access_log   "__ACCESS_LOG__" combined;
       error_log    "__ERROR_LOG__" warn;
 
+      sendfile off;
+      client_max_body_size 20m;
+      client_header_timeout 1000;
+      client_body_timeout 1200;
+      send_timeout 1200;
+      keepalive_timeout 1200;
+
   __REDIRECT__
   __SSL__
   __VHOST_DOCROOT__
@@ -89,7 +96,6 @@ vhost_type:
 ### Optional features to be enabled in vHost
 ###
 features:
-
   # SSL Configuration
   ssl: |
     ssl_certificate           __SSL_PATH_CRT__;
@@ -119,6 +125,12 @@ features:
 
         fastcgi_index index.php;
         fastcgi_intercept_errors on;
+
+        fastcgi_connect_timeout 1200;
+        fastcgi_send_timeout 1200;
+        fastcgi_read_timeout 600;
+
+        fastcgi_param APPLICATION_ENV dev;
     }
 
   alias: |

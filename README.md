@@ -1,3 +1,18 @@
+# osombox
+
+## Start
+
+1.- docker-compose up -d
+2.- dump mysql schema, data, store_procedures and views to bob database
+3.- run yoda
+
+
+
+## create shop domain
+
+
+=======================================
+
 <p align="center">
     <h1 align="center">The Devilbox</h1>
 </p>
