@@ -2,16 +2,16 @@
 
 ## Start
 
-1.- docker-compose up -d
+0.- `cp env-osom .env`
+1.- `docker-compose up -d`
 2.- dump mysql schema, data, store_procedures and views to bob database
-3.- run yoda
-
-
+3.- run yoda: `./yoda -c ./yoda.yml solr_export --update-stats --optimize`
+4.- create default domains: `./createDefaultDomains.sh`
 
 ## create shop domain
+`./createDomain.sh [shopDomain]`
 
-
-=======================================
+<hr>
 
 <p align="center">
     <h1 align="center">The Devilbox</h1>
