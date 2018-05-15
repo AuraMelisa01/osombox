@@ -5,6 +5,7 @@ mkdir ./data/www/svn.osom/bob.osom/.devilbox &&
 cp ./templates/vhost-gen/* ./data/www/svn.osom/bob.osom/.devilbox &&
 cd ./data/www/svn.osom/bob.osom &&
 ln -s ../trunk/bob/public htdocs &&
+cd ../../../.. &&
 mkdir ./data/www/svn.osom/alice.osom &&
 mkdir ./data/www/svn.osom/alice.osom/.devilbox &&
 cp ./templates/vhost-gen/* ./data/www/svn.osom/alice.osom/.devilbox &&
