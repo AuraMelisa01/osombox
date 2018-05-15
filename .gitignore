@@ -17,7 +17,7 @@
 /.env
 /log/[a-z0-9-]*
 /data/*
-/backups/*
+#/backups/*
 
 # Ignore Certificate Authority
 /ca/*
