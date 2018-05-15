@@ -2,11 +2,13 @@
 
 ## Start
 
-0.- `cp env-osom .env`
-1.- `docker-compose up -d`
-2.- dump mysql schema, data, store_procedures and views to bob database
-3.- run yoda: `./yoda -c ./yoda.yml solr_export --update-stats --optimize`
-4.- create default domains: `./createDefaultDomains.sh`
+0. `cp env-osom .env`
+1. `docker-compose up -d`
+2. dump mysql schema, data, store_procedures and views to bob database
+3. run yoda: `./yoda -c ./yoda.yml solr_export --update-stats --optimize`
+4. clone the project in data/www/svn.osom
+5. configure the project
+6. create default domains: `./createDefaultDomains.sh`
 
 ## create shop domain
 `./createDomain.sh [shopDomain]`
